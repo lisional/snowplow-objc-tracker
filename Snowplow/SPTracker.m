@@ -251,6 +251,16 @@
     [self addEventWithPayload:[event getPayload] andContext:[event getContexts] andEventId:[event getEventId]];
 }
 
+- (void) trackPushNotificationEvent:(SPPushNotification *)event {
+    SPUnstructured * unstruct = [SPUnstructured build:^(id<SPUnstructuredBuilder> builder) {
+        [builder setEventData:[event getPayload]];
+        [builder setTimestamp:[event getTimestamp]];
+        [builder setContexts:[event getContexts]];
+        [builder setEventId:[event getEventId]];
+    }];
+    [self trackUnstructuredEvent:unstruct];
+}
+
 // Event Decoration
 
 - (void) addEventWithPayload:(SPPayload *)pb andContext:(NSMutableArray *)contextArray andEventId:(NSString *)eventId {

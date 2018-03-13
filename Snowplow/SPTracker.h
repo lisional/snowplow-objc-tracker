@@ -32,6 +32,7 @@
 @class SPScreenView;
 @class SPTiming;
 @class SPEcommerce;
+@class SPPushNotification;
 
 @protocol SPTrackerBuilder <NSObject>
 
@@ -134,5 +135,10 @@
  * Tracks an Ecommerce Event object.
  */
 - (void) trackEcommerceEvent:(SPEcommerce *)event;
+
+/**
+ * Tracks an Open Push Notification object.
+ */
+- (void) trackPushNotificationEvent:(SPPushNotification *)event;
 
 @end

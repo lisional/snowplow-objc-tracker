@@ -73,6 +73,7 @@ extern NSString * const kSPMobileContextSchema;
 extern NSString * const kSPDesktopContextSchema;
 extern NSString * const kSPSessionContextSchema;
 extern NSString * const kSPGeoContextSchema;
+extern NSString * const kSPPushNotificationSchema;
 
 // --- Event Keys
 
@@ -195,5 +196,25 @@ extern NSString * const kSPUtCategory;
 extern NSString * const kSPUtVariable;
 extern NSString * const kSPUtTiming;
 extern NSString * const kSPUtLabel;
+
+// --- Push Notification Event
+
+extern NSString * const kSPPushAction;
+extern NSString * const kSPPushTrigger;
+extern NSString * const kSPPushDeliveryDate;
+extern NSString * const kSPPushCategoryId;
+extern NSString * const kSPPushThreadId;
+extern NSString * const kSPPushNotification;
+extern NSString * const kSPPnTitle;
+extern NSString * const kSPPnSubtitle;
+extern NSString * const kSPPnBody;
+extern NSString * const kSPPnBadge;
+extern NSString * const kSPPnSound;
+extern NSString * const kSPPnLaunchImageName;
+extern NSString * const kSPPnUserInfo;
+extern NSString * const kSPPnAttachments;
+extern NSString * const kSPPnAttachmentId;
+extern NSString * const kSPPnAttachmentUrl;
+extern NSString * const kSPPnAttachmentType;
 
 @end
