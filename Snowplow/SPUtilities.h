@@ -21,6 +21,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UserNotifications/UserNotifications.h>
 
 @interface SPUtilities : NSObject
 
@@ -179,5 +180,34 @@
  *  @return the same NSDictionary without any Null values
  */
 + (NSDictionary *) removeNullValuesFromDictWithDict:(NSDictionary *)dict;
+
+/**
+ * Maps a trigger object to the corresponding simplified string.
+ * @ param trigger A UNNotificationTrigger object
+ * @ return a string describing the type of trigger
+ */
++ (NSString *) getTriggerType:(UNNotificationTrigger *)trigger NS_AVAILABLE_IOS(10.0);
+
+/**
+ * Converts a UNNotificationAttachment array into an array of string dictionaries
+ * @ param UNNotificationAttachment attachments
+ * @ return an array of string dictionaries
+ */
+
++ (NSArray<NSDictionary *> *) convertAttachments:(NSArray<UNNotificationAttachment *> *)attachments NS_AVAILABLE_IOS(10.0);
+
+/**
+ * Converts a kebab-case string keys into a camel-case string keys
+ * @ param NSDictionary dict
+ * @ return a dictionary
+ */
++ (NSDictionary *) replaceHyphenatedKeysWithCamelcase:(NSDictionary *)dict;
+
+/**
+ * Converts a kebab-case string into a camel-case string
+ * @ param NSString key
+ * @ return a string
+ */
++ (NSString *) camelcaseParsedKey:(NSString *)key;
 
 @end

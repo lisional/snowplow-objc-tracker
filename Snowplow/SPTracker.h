@@ -35,6 +35,7 @@
 @class SPSelfDescribingJson;
 @class SPConsentWithdrawn;
 @class SPConsentGranted;
+@class SPPushNotification;
 
 @protocol SPTrackerBuilder <NSObject>
 
@@ -158,5 +159,10 @@
  * Tracks a Consent Granted Event object.
  */
 - (void) trackConsentGrantedEvent:(SPConsentGranted *)event;
+
+/**
+ * Tracks an Open Push Notification object.
+ */
+- (void) trackPushNotificationEvent:(SPPushNotification *)event;
 
 @end
